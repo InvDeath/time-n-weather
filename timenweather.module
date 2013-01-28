@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Module file for Time-n-Weather module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+
+function timenweather_menu() {
+	$itens['admin/structure/timanweather'] = array(
+		'title' => 'Configuration page',
+		'description' => 'Place where situated all configurations.',
+		'page callback' => timenweather_configure_page,
+		'access callback' => TRUE,
+	);
+	
+  return $items;	
+} 

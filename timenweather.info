@@ -1,0 +1,5 @@
+name = Time-n-Weather
+description = Provedes btock with clocks and weather information.
+package = Widgets
+core = 7.x
+dependencies[] = block
