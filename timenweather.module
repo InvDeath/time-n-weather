@@ -10,12 +10,17 @@
  */
 
 function timenweather_menu() {
-	$itens['admin/structure/timanweather'] = array(
-		'title' => 'Configuration page',
-		'description' => 'Place where situated all configurations.',
-		'page callback' => timenweather_configure_page,
-		'access callback' => TRUE,
-	);
-	
+  $items['admin/config/timenweather/settings'] = array(
+    'title'             => 'Time-n-Weather configuration page',
+    'description'       => 'Changing all module\'s configurations.' ,
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('timenweather_admin_settings'),
+    'access arguments'  => array('administer site configuration'),
+    'type'              => MENU_NORMAL_ITEM,
+    'file'              => 'timenweather.admin.inc',
+  );
+
   return $items;	
 } 
+
+
