@@ -10,9 +10,10 @@
  */
 
 function timenweather_menu() {
-  $items['admin/config/timenweather/settings'] = array(
+
+  $items['admin/config/services/timenweather'] = array(
     'title'             => 'Time-n-Weather configuration page',
-    'description'       => 'Changing all module\'s configurations.' ,
+    'description'       => 'Changing all module configurations.' ,
     'page callback'     => 'drupal_get_form',
     'page arguments'    => array('timenweather_admin_settings'),
     'access arguments'  => array('administer site configuration'),
